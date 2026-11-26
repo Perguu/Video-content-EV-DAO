@@ -1,0 +1,12 @@
+<!-- @dsCard group="Content" height=72 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Tag — preview</title></head>
+<body>
+<div id="root" class="ev-demo"></div>
+<script>
+  var E = window.EVPlus, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'ev-row',style:{flexWrap:'nowrap',justifyContent:'flex-start'}},h('span',{style:{flex:'none'}},h(E.Tag,null,'RWA')),h('span',{style:{flex:'none'}},h(E.Tag,{tone:'signal'},'Base case')),h('span',{style:{flex:'none'}},h(E.Tag,{tone:'loss'},'Rugged')),h('span',{style:{flex:'none'}},h(E.Tag,{tone:'caution'},'Not confirmed'))));
+</script>
+</body>
+</html>

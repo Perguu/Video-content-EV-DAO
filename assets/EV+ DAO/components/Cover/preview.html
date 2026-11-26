@@ -1,0 +1,72 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EV+ DAO</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono&display=swap">
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--paper); color:var(--ink); font-family:var(--font-sans, "Geist", system-ui, sans-serif); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .sig { fill:var(--signal); }
+  .slab { fill:var(--ink); }
+  .tint { fill:var(--signal-tint); }
+  .amber { fill:var(--caution-tint); }
+  .phos { fill:var(--phosphor); }
+  .cut { fill:var(--paper); }
+  .sq { rx:var(--radius-none); }
+  .words { position:absolute; left:var(--space-8); bottom:var(--space-8); max-width:440px; }
+  .name { margin:0; font-family:var(--font-pixel, "Geist Pixel", monospace); font-weight:400; font-size:96px; line-height:.92; color:var(--ink); letter-spacing:0; }
+  .tag { margin:var(--space-3) 0 0 2px; font-family:var(--font-mono, "Geist Mono", monospace); font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      signal 160x256 slab bleeding off the bottom (the brand green, largest) · ink 296x160 bleeding off top and right (the black of the logo disc) · signal-tint 128x128 · caution-tint 64x64 · phosphor pixel "+" (5 x 24px squares) set on the ink slab like the logo on its disc
+  arrangement one tall green slab with a dark slab above-right and two satellites below it, space-4 gutters, all corners square
+  pattern     plus grid, from "precise, technical, mono, pixel logo": 16 pixel pluses cut from the tint at a space-8 pitch, and a stair of three space-4 squares cut into the green slab echoing the stepped V of the wordmark
+  scales      sides in space-4 multiples; gutters space-4; pitch space-8; corners radius-none
+-->
+<rect class="sig sq" x="24" y="32" width="160" height="272"/>
+<rect class="cut sq" x="168" y="32" width="16" height="16"/>
+<rect class="cut sq" x="152" y="32" width="16" height="16"/>
+<rect class="cut sq" x="168" y="48" width="16" height="16"/>
+<rect class="slab sq" x="200" y="-16" width="296" height="160"/>
+<rect class="phos" x="344" y="48" width="24" height="24"/>
+<rect class="phos" x="368" y="48" width="24" height="24"/>
+<rect class="phos" x="320" y="48" width="24" height="24"/>
+<rect class="phos" x="344" y="72" width="24" height="24"/>
+<rect class="phos" x="344" y="24" width="24" height="24"/>
+<rect class="tint sq" x="200" y="160" width="128" height="144"/>
+<rect class="cut" x="210" y="174" width="12" height="4"/><rect class="cut" x="214" y="170" width="4" height="12"/>
+<rect class="cut" x="210" y="206" width="12" height="4"/><rect class="cut" x="214" y="202" width="4" height="12"/>
+<rect class="cut" x="210" y="238" width="12" height="4"/><rect class="cut" x="214" y="234" width="4" height="12"/>
+<rect class="cut" x="210" y="270" width="12" height="4"/><rect class="cut" x="214" y="266" width="4" height="12"/>
+<rect class="cut" x="242" y="174" width="12" height="4"/><rect class="cut" x="246" y="170" width="4" height="12"/>
+<rect class="cut" x="242" y="206" width="12" height="4"/><rect class="cut" x="246" y="202" width="4" height="12"/>
+<rect class="cut" x="242" y="238" width="12" height="4"/><rect class="cut" x="246" y="234" width="4" height="12"/>
+<rect class="cut" x="242" y="270" width="12" height="4"/><rect class="cut" x="246" y="266" width="4" height="12"/>
+<rect class="cut" x="274" y="174" width="12" height="4"/><rect class="cut" x="278" y="170" width="4" height="12"/>
+<rect class="cut" x="274" y="206" width="12" height="4"/><rect class="cut" x="278" y="202" width="4" height="12"/>
+<rect class="cut" x="274" y="238" width="12" height="4"/><rect class="cut" x="278" y="234" width="4" height="12"/>
+<rect class="cut" x="274" y="270" width="12" height="4"/><rect class="cut" x="278" y="266" width="4" height="12"/>
+<rect class="cut" x="306" y="174" width="12" height="4"/><rect class="cut" x="310" y="170" width="4" height="12"/>
+<rect class="cut" x="306" y="206" width="12" height="4"/><rect class="cut" x="310" y="202" width="4" height="12"/>
+<rect class="cut" x="306" y="238" width="12" height="4"/><rect class="cut" x="310" y="234" width="4" height="12"/>
+<rect class="cut" x="306" y="270" width="12" height="4"/><rect class="cut" x="310" y="266" width="4" height="12"/>
+<rect class="amber sq" x="344" y="160" width="64" height="64"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">EV+ DAO</h1>
+<p class="tag">Onchain traders, builders and KOLs. Positive expected value.</p>
+</div>
+</div>
+</body>
+</html>

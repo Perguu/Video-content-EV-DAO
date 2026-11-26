@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EV+ DAO · Daily On-Chain Recap</title><style>*{box-sizing:border-box}body{margin:0;background:#F0EEE9;color:#232523;font:16px/1.5 Arial,"Segoe UI",sans-serif}main{width:min(1120px,calc(100% - 32px));margin:40px auto}h1{font-size:clamp(25px,4vw,40px);margin:8px 0}.tag{font:13px ui-monospace,Consolas,monospace;color:#5E5D58}p{color:#5E5D58}.player{width:min(100%,calc((100vh - 250px)*16/9));aspect-ratio:16/9;margin:0 auto}.player video{display:block;width:100%;height:100%;object-fit:contain;background:#000;border:1px solid #D6D3CC;border-radius:8px}a{display:inline-block;margin-top:14px;padding:10px 16px;background:#086F28;color:#fff;text-decoration:none;border-radius:6px}small{color:#5E5D58}</style></head><body><main><div class="tag">EV+ DAO · DAILY ON-CHAIN RECAP</div><h1>{{TITLE}}</h1><p>{{DURATION}} s</p><div class="player"><video controls playsinline preload="metadata" aria-label="EV+ DAO daily recap video"></video></div><section id="review" lang="vi"><h2>Timeline & góp ý</h2>
+<nav aria-label="Chọn đoạn video"></nav>
+<label>Vị trí <output id="stamp">0.00 s</output><input id="seek" type="range" min="0" max="{{DURATION}}" step="0.01" value="0"></label>
+<label>Góp ý tại mốc đang chọn<textarea id="note" rows="2" placeholder="Ví dụ: giữ số liệu này thêm nửa giây"></textarea></label>
+<button id="add">Lưu góp ý</button> <button id="copy">Sao chép tất cả</button>
+<span id="status" role="status"></span><ol id="notes"></ol></section>
+<style>#review{max-width:900px;margin:24px auto}#review nav{display:flex;flex-wrap:wrap;gap:6px}#review button{cursor:pointer;border:1px solid #bbbcb3;border-radius:6px;background:#fff;color:#183622;padding:8px 12px}#review label{display:block;margin:12px 0}#review input,#review textarea{display:block;width:100%;accent-color:#086f28}#review textarea{padding:8px;font:inherit}#review output{font-variant-numeric:tabular-nums}#notes li{margin:8px 0;white-space:pre-wrap}#notes button{margin-right:8px}</style><br><a id="download" download="{{KEY}}.mp4">Download MP4</a><p><small>Standalone preview file. Open with a current browser and press play.</small></p></main><script type="application/octet-stream" id="video-data">{{MEDIA}}</script><script>const encoded=document.getElementById('video-data').textContent.trim();const raw=atob(encoded),bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);const url=URL.createObjectURL(new Blob([bytes],{type:'video/mp4'}));document.querySelector('video').src=url;document.querySelector('#download').href=url;window.addEventListener('pagehide',()=>URL.revokeObjectURL(url));</script><script>
+{
+ const el=id=>document.getElementById(id), video=document.querySelector('video');
+ const key='{{KEY}}-review';
+ let notes=[];
+ try {notes=JSON.parse(localStorage.getItem(key)||'[]')} catch {}
+ const format=t=>Number(t).toFixed(2)+' s';
+ function jump(t){video.pause();video.currentTime=t;sync()}
+ function sync(){el('seek').value=video.currentTime;el('stamp').textContent=format(video.currentTime)}
+ video.addEventListener('timeupdate',sync);
+ el('seek').oninput=e=>jump(Number(e.target.value));
+ el('note').onfocus=()=>video.pause();
+ function button(parent,label,click){const b=document.createElement('button');b.textContent=label;b.onclick=click;parent.append(b)}
+ for(const [t,title] of {{CHAPTERS}}){
+   button(document.querySelector('#review nav'),format(t)+' · '+title,()=>jump(t));
+ }
+ function save(){try{localStorage.setItem(key,JSON.stringify(notes));el('status').textContent='Đã lưu trên máy này.'}catch{el('status').textContent='Hãy sao chép góp ý trước khi đóng trang.'} draw()}
+ function draw(){el('notes').replaceChildren();for(const n of notes){const li=document.createElement('li');button(li,format(n.t),()=>jump(n.t));button(li,'Xóa',()=>{notes=notes.filter(item=>item!==n);save()});li.append(document.createTextNode(n.text));el('notes').append(li)}}
+ el('add').onclick=()=>{const text=el('note').value.trim();if(!text){el('note').focus();return}notes.push({t:video.currentTime,text});notes.sort((a,b)=>a.t-b.t);el('note').value='';save()};
+ el('copy').onclick=async()=>{if(!notes.length){el('status').textContent='Chưa có góp ý.';return}const text=notes.map(n=>format(n.t)+' — '+n.text).join('\n');try{await navigator.clipboard.writeText(text);el('status').textContent='Đã sao chép.'}catch{window.prompt('Sao chép góp ý',text)}};
+ draw();
+}
+</script></body></html>

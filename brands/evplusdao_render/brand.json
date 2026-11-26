@@ -1,0 +1,35 @@
+{
+  "name": "EV+ DAO",
+  "wordmark": "EV+ DAO",
+  "colors": {
+    "bg": "#F0EEE9",
+    "surface": "#E7E5DF",
+    "surface2": "#E7E5DF",
+    "line": "#D6D3CC",
+    "text": "#232523",
+    "dim": "#5E5D58",
+    "dim2": "#5E5D58",
+    "accent": "#086F28",
+    "accentInk": "#FFFFFF",
+    "positive": "#086F28",
+    "negative": "#B23A17",
+    "warn": "#7E5700"
+  },
+  "type": {
+    "family": "Geist Pixel",
+    "files": [
+      { "weight": 400, "file": "fonts/GeistPixel-Square.woff2" }
+    ],
+    "displayWeight": 400,
+    "displayTracking": "0",
+    "labelTracking": "0.06em"
+  },
+  "radii": { "card": 12, "hero": 12, "pill": 9999 },
+  "motion": { "ease": [0.16, 1, 0.3, 1], "easeData": [0.45, 0.5, 0.0, 0.8], "springs": false },
+  "logo": { "mark": "assets/Logos/ev-plus-logo.png" },
+  "rules": {
+    "do": ["Paper palette", "Geist Pixel for headlines and hero values", "mono data labels", "cite reported figures and uncertainty"],
+    "dont": ["No gradients or shadows", "No unsupported sale or hack claims", "No phosphor fill outside terminal black"],
+    "claimsSource": "https://x.com/EVplus_DAO/status/2125623674552328396"
+  }
+}

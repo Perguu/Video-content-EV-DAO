@@ -1,0 +1,168 @@
+/* EV+ DAO — generated from tokens.json */
+:root, [data-theme="light"] {
+  --paper: #f0eee9; /* Page background of every chart, report and post. Warm paper in Paper theme, true terminal black in Terminal. */
+  --panel: #e7e5df; /* Card / chart plate sitting on paper. Always with a 1px line border, never a shadow. */
+  --line: #d6d3cc; /* Hairline borders on panels, gridlines in charts, dividers above the source footer. */
+  --ink: #232523; /* Headlines, stat numbers and body text on paper or panel (12:1+ in both themes). */
+  --ink-muted: #5e5d58; /* Subtitles, chart labels, axis text, source and note footers on paper or panel (5:1+ in both themes). */
+  --signal: #086f28; /* The one highlight per view: the key bar, the base-case number, the takeaway word, links. Readable as text on paper and panel in both themes (Paper ~5:1, Terminal ~14:1). */
+  --signal-tint: #9fd9ac; /* Secondary bars and the context series behind a signal bar. Decorative only: always pair with a value label, never use as text. */
+  --phosphor: #3bff4a; /* The logo green. Fills on terminal black only: the logo, cover blocks, stickers, PFP rings. Never as text or a fill on paper. */
+  --terminal: #000000; /* Logo ground and terminal-style blocks. Text on it is phosphor or ink in Terminal theme. */
+  --on-signal: #ffffff; /* Text and icons placed on a signal fill (buttons, numbered step dots). */
+  --loss: #b23a17; /* Losses, drawdowns, rugs, and the second series when comparing against the signal series (e.g. NFTs vs memecoins). Darker than signal in Paper so the pair differs in lightness, not hue alone. */
+  --loss-tint: #f1b9a6; /* Background zones for a drawdown phase in cycle diagrams. Decorative only. */
+  --caution: #7e5700; /* Unconfirmed, speculative or 'not yet' labels: no token confirmed, forecast windows. Text-safe in both themes. */
+  --caution-tint: #f3d98e; /* Background zone for the accumulation / no-one-cares phase and for 'not yet' shaded regions. Decorative only. */
+  --glow-phosphor: 0 0 12px rgba(59, 255, 74, 0.45); /* CRT glow behind phosphor elements on terminal black only (logo, cover, stickers). Never on paper. */
+}
+[data-theme="dark"] {
+  --paper: #0a0b0a;
+  --panel: #141714;
+  --line: #262b26;
+  --ink: #ecefea;
+  --ink-muted: #9ba39b;
+  --signal: #3bff4a;
+  --signal-tint: #2e7a38;
+  --on-signal: #0a0b0a;
+  --loss: #ff6a4d;
+  --loss-tint: #5a2418;
+  --caution: #f2c14e;
+  --caution-tint: #4a3a12;
+}
+:root {
+  --space-1: 4px; /* Icon-to-label gap, legend swatch gap. */
+  --space-2: 8px; /* Kicker to headline, stat to its label. */
+  --space-3: 12px; /* Rows inside a legend or key list. */
+  --space-4: 16px; /* Gap between sibling cards in a row. */
+  --space-6: 24px; /* Gap between stacked panels. */
+  --space-8: 32px; /* Panel inner padding. */
+  --space-12: 48px; /* Gap between header block and first panel. */
+  --space-16: 64px; /* Outer margin of a full infographic canvas. */
+  --radius-none: 0px; /* Pixel elements: the logo grid, cover blocks, legend swatches, chart bars in Terminal theme. */
+  --radius-sm: 4px; /* Chart bars in Paper theme, tags, small buttons. */
+  --radius-md: 8px; /* Inner step cards inside a panel. */
+  --radius-lg: 12px; /* Outer panels / chart plates. */
+  --font-sans: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-pixel: "Geist Pixel", "Geist Mono", ui-monospace, monospace;
+  --font-pixel-grid: "Geist Pixel Grid", "Geist Pixel", ui-monospace, monospace;
+  --text-pixel-display: 400 96px/92px var(--font-pixel); /* Brand name, cover, poster titles. */
+  --text-headline: 400 48px/52px var(--font-pixel); /* Infographic headline: the takeaway sentence. */
+  --text-stat: 400 64px/64px var(--font-pixel); /* Hero numbers. */
+  --text-stat-sm: 400 40px/44px var(--font-pixel); /* Bar values, secondary numbers. */
+  --text-pixel-stamp: 400 20px/24px var(--font-pixel); /* Stickers and stamps. */
+  --text-grid-display: 400 64px/64px var(--font-pixel-grid); /* Decorative only: big background numerals, thumbnails, the Terminal face. Never for text people must read. */
+  --text-title: 500 24px/32px var(--font-sans);
+  --text-body: 400 17px/26px var(--font-sans);
+  --text-caption: 400 14px/20px var(--font-sans);
+  --text-kicker: 500 13px/18px var(--font-mono);
+  --text-subhead-mono: 400 18px/26px var(--font-mono);
+  --text-data-label: 400 14px/20px var(--font-mono);
+  --text-footnote: 400 12px/18px var(--font-mono);
+}
+.pixel-display {
+  font-family: var(--font-pixel);
+  font-size: 96px;
+  line-height: 92px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.headline {
+  font-family: var(--font-pixel);
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.stat {
+  font-family: var(--font-pixel);
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.stat-sm {
+  font-family: var(--font-pixel);
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.pixel-stamp {
+  font-family: var(--font-pixel);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.grid-display {
+  font-family: var(--font-pixel-grid);
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.title {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.body {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.caption {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.subhead-mono {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.data-label {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.footnote {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+@font-face {
+  font-family: "Geist Pixel";
+  src: url("fonts/GeistPixel-Square.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist Pixel Grid";
+  src: url("fonts/GeistPixel-Grid.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,12 @@
+<!-- @dsCard group="Structure" height=220 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Panel — preview</title></head>
+<body>
+<div id="root" class="ev-demo"></div>
+<script>
+  var E = window.EVPlus, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(E.Panel,{title:'How farming works',subtitle:'Points go out every week, split by what each wallet does.'},h('p',{style:{margin:0,color:'var(--ink-muted)'}},'Panel content goes here: steps, a chart, or a stat row.')));
+</script>
+</body>
+</html>

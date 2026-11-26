@@ -1,0 +1,1 @@
+{"fps": 30, "w": 1920, "h": 1080, "bpm": 120, "total": 450, "brand": "brands/evplusdao_render", "plugins": ["projects/evplus-abraxas-recap/motion.js"], "grain": 0, "vignette": false, "punch": [], "shots": [{"type": "evplus-recap", "t0": 0, "t1": 450}], "captions": [], "big": [], "flash": [], "glitch": [], "fadeOut": null}

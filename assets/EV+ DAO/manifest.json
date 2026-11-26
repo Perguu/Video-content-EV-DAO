@@ -1,0 +1,103 @@
+{
+  "manifestVersion": 3,
+  "name": "EV+ DAO",
+  "namespace": "EVPlus",
+  "files": [
+    "assets/Logos/README.md",
+    "components/BarChart/README.md",
+    "components/Panel/README.md",
+    "components/ResearchHeader/README.md",
+    "components/SourceFooter/README.md",
+    "components/Stat/README.md",
+    "components/StepCard/README.md",
+    "components/Sticker/README.md",
+    "components/Tag/README.md",
+    "components/bundle.css",
+    "components/bundle.js",
+    "components/index.d.ts",
+    "fonts/GeistPixel-Grid.woff2",
+    "fonts/GeistPixel-Square.woff2",
+    "fonts/OFL-Geist.txt",
+    "tokens.css"
+  ],
+  "libraries": [
+    {
+      "name": "react",
+      "version": "18",
+      "global": "React"
+    },
+    {
+      "name": "react-dom",
+      "version": "18",
+      "global": "ReactDOM"
+    }
+  ],
+  "components": [
+    {
+      "name": "ResearchHeader",
+      "group": "Structure",
+      "summary": "The top of every EV+ infographic: mono kicker, claim-style headline, mono subhead, logo top-right."
+    },
+    {
+      "name": "Panel",
+      "group": "Structure",
+      "summary": "A plate on the page that holds one idea: a title, a caption subtitle, then content."
+    },
+    {
+      "name": "StepCard",
+      "group": "Content",
+      "summary": "One numbered step in a how-it-works sequence, used in rows of three inside a Panel."
+    },
+    {
+      "name": "BarChart",
+      "group": "Data",
+      "summary": "Scenario or category bars with the value printed above each bar: the EV+ bear / base / bull chart."
+    },
+    {
+      "name": "Stat",
+      "group": "Data",
+      "summary": "A big number with a short label and a qualifier, shown in rows of two to four."
+    },
+    {
+      "name": "Tag",
+      "group": "Content",
+      "summary": "A small mono label for status or category: one or two words, uppercase."
+    },
+    {
+      "name": "SourceFooter",
+      "group": "Structure",
+      "summary": "The required last block of every EV+ infographic: where the data came from and what is assumed."
+    },
+    {
+      "name": "Sticker",
+      "group": "Terminal",
+      "summary": "A Terminal-face stamp: phosphor pixel type on terminal black with CRT glow, for X posts, Telegram, thumbnails and merch."
+    }
+  ],
+  "assetGroups": [
+    {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "ev-plus-logo.png"
+      ],
+      "files": [
+        {
+          "path": "assets/Logos/ev-plus-logo.png",
+          "id": "fa5998d189361727bddc26a136d2d8fe"
+        }
+      ]
+    }
+  ],
+  "storage": {
+    "files": {
+      "assets/Logos/ev-plus-logo.png": {
+        "store": "blob",
+        "id": "fa5998d189361727bddc26a136d2d8fe",
+        "bytes": 2101405,
+        "type": "image/png"
+      }
+    },
+    "blobBytesUsed": 2101405
+  }
+}

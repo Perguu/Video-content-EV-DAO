@@ -1,0 +1,4 @@
+node_modules/
+**/local/frames/
+**/local/render.mp4
+__pycache__/
